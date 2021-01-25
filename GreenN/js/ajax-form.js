@@ -14,6 +14,8 @@ $(function() {
 		// Serialize the form data.
 		var formData = $(form).serialize();
 
+		
+		
 		// Submit the form using AJAX.
 		$.ajax({
 			type: 'POST',
