@@ -609,6 +609,29 @@
         </div>
     </footer>
     <!-- JS here -->
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+     <script>
+         var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
+         var firebaseDatabase; //파이어베이스 db 모듈 전역변수
+         var userInfo; //가입한 유저의 정보. object 타입
+         //파이어 베이스 초기화 코드
+         var config = {
+             apiKey: "AIzaSyB8r-4Je7eGofLDKDiTpEppdAp9cItLLug",
+             authDomain: "webnote-59e75.firebaseapp.com",
+             databaseURL: "https://webnote-59e75.firebaseio.com",
+             projectId: "webnote-59e75",
+             storageBucket: "webnote-59e75.appspot.com",
+             messagingSenderId: "1076614864624",
+             appId: "1:1076614864624:web:d1d61eb0ff82cb2aba2c35",
+             measurementId: "G-7DW85B53L3"
+         };
+         firebase.initializeApp(config);
+
+         firebaseEmailAuth = firebase.auth();
+         firebaseDatabase = firebase.database();
+
+    </script>
+
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
