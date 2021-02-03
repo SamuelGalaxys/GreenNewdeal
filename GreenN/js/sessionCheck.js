@@ -34,7 +34,7 @@
                                 } else {
                                     //없으면 다른 이미지 대체
                                     document.getElementById("myimage").src = "https://www.w3schools.com/bootstrap/img_avatar3.png";
-                                    console.log("이미지가 없네요ㅠㅠ");
+                                    console.log("이미지가 없네요");
                                 }
                 
                                 //3.한줄글이 있으면 가져와서 넣어준다. 
@@ -44,7 +44,7 @@
                                 } else {
                                     //없으면 더미 데이터 넣어준다.
                                     document.getElementById("statetxt").textContent = "한줄 기분을 적고 프로필 사진을 선택해 주세요~";
-                                    console.log("한줄글이 없네요 ㅠㅠ");
+                                    console.log("한줄글 없음");
                                 }
 
                              
