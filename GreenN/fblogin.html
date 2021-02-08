@@ -78,8 +78,8 @@
 <script>
 
     function signin(){
-        alert("hello fb");
-     var provider = new firebase.auth.FacebookAuthProvider();
+
+        var provider = new firebase.auth.FacebookAuthProvider();
      provider.addScope('user_birthday,email');
      firebase.auth().useDeviceLanguage();
 
