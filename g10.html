@@ -135,5 +135,77 @@ th {
      setInterval("time()",1000);     //1초 지난후 time()실행
   }
       </script>
+
+
+<script>
+
+$(document).ready(function () {
+        $("#modalUpdate").modal('show');
+        
+
+    });
+
+ 
+ 
+
+	
+	$('#displayNotif').on('click', function(){
+		var placementFrom = $('#notify_placement_from option:selected').val();
+		var placementAlign = $('#notify_placement_align option:selected').val();
+		var state = $('#notify_state option:selected').val();
+		var style = $('#notify_style option:selected').val();
+		var content = {};
+
+		content.message = 'Turning standard Bootstrap alerts into "notify" like notifications';
+		content.title = 'Bootstrap notify';
+		if (style == "withicon") {
+			content.icon = 'la la-bell';
+		} else {
+			content.icon = 'none';
+		}
+		content.url = 'index.html';
+		content.target = '_blank';
+
+		$.notify(content,{
+			type: state,
+			placement: {
+				from: placementFrom,
+				align: placementAlign
+			},
+			time: 1000,
+		});
+	});
+</script>
+
+
+
+<div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-primary">
+					<h6 class="modal-title"><i class="la la-info-circle"></i> 서버 점검 안내</h6>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body text-center">									
+					<p>일시 : 오늘 오후 6시~10시 </p>
+ 					<p></p>
+					<b>이용해줘서 고마워. mhaZone으로 새롭게 확장될거야.</b></p>
+				    </br>
+					<p>git@github.com:SamuelGalaxys/GreenN.git</p>
+				    </b><p>Accessible Github users: SamuelGalaxys, Esther03-web</p>
+				    </b><p>Version : 1.1</p>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 </body>
 </html>
